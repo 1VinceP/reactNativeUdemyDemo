@@ -1,25 +1,31 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import Header from './src/components/Header';
+import AlbumList from './src/components/AlbumList';
+
 class App extends Component {
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+      <View>
+        <View style={styles.statusBar} />
+        <Header title={'Albums'} color={'#fc9f00'} />
+
+        <AlbumList />
+
       </View>
     );
   }
+  
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#4286d1',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  statusBar: {
+    width: '100%',
+    height: 24,
+    backgroundColor: '#fc7500'
+  }
+})
 
 export default App;
