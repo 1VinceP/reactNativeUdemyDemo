@@ -10,6 +10,7 @@ class App extends Component {
     return (
       <View>
         <View style={styles.statusBar} />
+        
         <Header title={'Albums'} color={'#fc9f00'} />
 
         <AlbumList />
